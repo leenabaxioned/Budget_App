@@ -1,40 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
-<html lang="en"> 
-
-<head>
-  <meta charset="utf-8">
-  <title>Client</title>
-  <!-- View-port Basics: http://mzl.la/VYREaP -->
-  <!-- This meta tag is used for mobile device to display the page without any zooming,
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Budget App</title>
+    <!-- View-port Basics: http://mzl.la/VYREaP -->
+    <!-- This meta tag is used for mobile device to display the page without any zooming,
        so how much the device is able to fit on the screen is what's shown initially. 
        Remove comments from this tag, when you want to apply media queries to the website. -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
-  <link rel="shortcut icon" href="favicon.ico" />
-  <!--font-awesome link for icons-->
-  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
-</head>
-<body>
-  <!--container start-->
-  <div class="container">
-    <!--header section start-->
-    <header>
-    </header>
-    <!--header section start-->
-    <!--main section start-->
-    <main>
-    </main>
-    <!--main section end-->
-    <!--footer section start-->
-    <footer>      
-    </footer>
-    <!--footer section end-->
-  </div>
-  <!--container end-->
-  <script src="assets/js/script.js"></script>
-</body>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!--font-awesome link for icons-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/font-awesome/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
+    <link rel="stylesheet" media="screen" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!--container start-->
+    <div class="container">
+      <!--header section start-->
+      <header></header>
+      <!--header section start-->
+      <!--main section start-->
+      <main>
+        <section class="main">
+          <div class="wrapper">
+            <h1>Budget App</h1>
+            <div class="budget-app">
+              <div class="budget-details">
+                <form autocomplete="off" id="budgetForm">
+                  <label for="enterBudget">Please Enter Your Budget</label>
+                  <input type="text" name="enterBudget" id="enterBudget" />
+                  <button class="calculate btn" type="submit">Calculate</button>
+                </form>
+                <form autocomplete="off" id="expenseForm">
+                  <div class="expenseTitle">
+                    <label for="expenseName">Please Enter Your Expense</label>
+                    <input type="text" name="expenseName" id="expenseName" />
+                  </div>
+                  <div class="expensePrice">
+                    <label for="expenseAmount">Please Enter Your Amount</label>
+                    <input
+                      type="text"
+                      name="expenseAmount"
+                      id="expenseAmount"
+                    />
+                  </div>
+                  <button class="addExpense btn" type="submit">
+                    Add Expense
+                  </button>
+                </form>
+              </div>
+              <div class="budget-display">
+                <ul class="budget-calculation">
+                  <li class="list first">
+                    <h2>Budget</h2>
+                    <span class="icon">budget icon</span>
+                    <span class="budget amount">$ 3000</span>
+                  </li>
+                  <li class="list second">
+                    <h2>Expenses</h2>
+                    <span class="icon">expense icon</span>
+                    <span class="budget amount">$ 2000</span>
+                  </li>
+                  <li class="list third">
+                    <h2>Balance</h2>
+                    <span class="icon">$</span>
+                    <span class="budget amount">$ 1000</span>
+                  </li>
+                </ul>
+                <ul id="expense-table">
+                  <li class="row">
+                    <h2 class="column">Expense Title</h2>
+                    <h2 class="column">Expense Value</h2>
+                    <h2 class="column">Operations</h2>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!--main section end-->
+      <!--footer section start-->
+      <footer></footer>
+      <!--footer section end-->
+    </div>
+    <!--container end-->
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
