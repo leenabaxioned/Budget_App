@@ -133,7 +133,8 @@ h1 {
 #budgetForm,
 #expenseForm,
 .expenseTitle,
-.expensePrice {
+.expensePrice,
+.budgetAmount {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -146,18 +147,16 @@ h1 {
   border-radius: 5px;
 }
 
+.budgetAmount,
 .expenseTitle,
 .expensePrice { 
   width: 100%;
   padding-top: 15px;
  }
 
-#budgetForm { 
-  padding-top: 20px;
-  border: 2px solid #466B40; 
-}
-
+#budgetForm { border: 2px solid #466B40; }
 #expenseForm { border: 2px solid #B62F31; }
+.budget-display { flex-basis: 50%; }
 
 .budget-details {
   flex-basis: 40%;
@@ -166,17 +165,15 @@ h1 {
   gap: 55px;
 }
 
-.budget-display { flex-basis: 50%; }
-
-form input[type="text"] {
-   width: 95%; 
-   padding: 4px 5px;
-   border-radius: 5px;
-   background-color: #fff;
+form input {
+  width: 95%; 
+  padding: 4px 5px;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
 #enterBudget { border: 1px solid #708D6B; }
-#expenseForm input[type="text"] { border: 1px solid #CD7778; }
+#expenseForm input { border: 1px solid #CD7778; }
 
 form label {
   padding-bottom: 5px;
@@ -250,7 +247,7 @@ form label {
   text-transform: uppercase;
 }
 
-.list .budget {
+.list .amount {
   color: #466B40;
   font-size: 33px;
 }
@@ -271,9 +268,47 @@ form label {
 .first .icon::before { content: "\f0d6"; }
 .second .icon::before { content: "\f09d"; }
 .third .icon::before { content: "\24"; }
-.second .budget { color: #B62F31; }
+.second .amount { color: #B62F31; }
 .budget-display {  gap: 35px; }
 
+.errBudget,
+.errExpense {
+  padding-top: 5px;
+  color: #c91619;
+  font-size: 10px;
+}
+
+.editBtn,
+.deleteBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  text-indent: -9999px;
+}
+
+.editBtn::before,
+.deleteBtn::before {
+  font-family: "FontAwesome";
+  font-size: 15px;
+  text-indent: 0;
+  cursor: pointer;
+}
+
+.editBtn:before { 
+  content: "\f044";
+  color: #076690;
+}
+.deleteBtn::before { 
+  content: "\f2ed";
+  color: #B62F31;
+}
+
+.rows:nth-child(3) {
+  display: flex;
+  gap: 10px;
+}
 /*=================================
   main styling ends here
 =================================*/
