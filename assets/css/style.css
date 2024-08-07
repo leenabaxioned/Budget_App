@@ -83,7 +83,8 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  background-color: #F5F5F5;
+  font-family: "Arial",sans-serif;
 }
 
 a { 
@@ -99,7 +100,7 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 96%; 
   margin: 0 auto;
 }
 /*=================================
@@ -113,6 +114,165 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+.main { padding: 15px 0; }
+
+h1 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.budget-app {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 115px;
+  align-items: flex-start;
+}
+
+#budgetForm,
+#expenseForm,
+.expenseTitle,
+.expensePrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#budgetForm,
+#expenseForm { 
+  padding: 10px; 
+  border-radius: 5px;
+}
+
+.expenseTitle,
+.expensePrice { 
+  width: 100%;
+  padding-top: 15px;
+ }
+
+#budgetForm { 
+  padding-top: 20px;
+  border: 2px solid #466B40; 
+}
+
+#expenseForm { border: 2px solid #B62F31; }
+
+.budget-details {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.budget-display { flex-basis: 50%; }
+
+form input[type="text"] {
+   width: 95%; 
+   padding: 4px 5px;
+   border-radius: 5px;
+   background-color: #fff;
+}
+
+#enterBudget { border: 1px solid #708D6B; }
+#expenseForm input[type="text"] { border: 1px solid #CD7778; }
+
+form label {
+  padding-bottom: 5px;
+  color: #1E1E1E;
+  font-size: 15px;
+}
+
+.btn { 
+  padding: 5px 15px;
+  margin: 10px 0;
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.calculate { 
+  border: 1px solid #708D6B;
+  color: #708D6B; 
+}
+
+.calculate:hover {
+  background-color: #708D6B;
+  color: #fff; 
+}
+
+.addExpense { 
+  border: 1px solid #CD7778;
+  color: #CD7778; 
+}
+
+.addExpense:hover {
+  background-color: #CD7778;
+  color: #fff; 
+}
+
+.budget-display,
+.list{
+  display: flex;
+  flex-direction: column;
+}
+
+#expense-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.budget-calculation,
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row { 
+  padding: 5px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.list { 
+  gap: 17px;
+  text-align: center; 
+}
+
+.list h2 {
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.list .budget {
+  color: #466B40;
+  font-size: 33px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  font-family: "FontAwesome";
+  text-indent: -9999px;
+}
+
+.icon::before {
+  color: #07658F;
+  font-size: 50px;
+  text-indent: 0;
+}
+
+.first .icon::before { content: "\f0d6"; }
+.second .icon::before { content: "\f09d"; }
+.third .icon::before { content: "\24"; }
+.second .budget { color: #B62F31; }
+.budget-display {  gap: 35px; }
 
 /*=================================
   main styling ends here
