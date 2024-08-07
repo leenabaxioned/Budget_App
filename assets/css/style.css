@@ -283,6 +283,7 @@ form label {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
   border: none;
   background-color: transparent;
   text-indent: -9999px;
@@ -290,6 +291,7 @@ form label {
 
 .editBtn::before,
 .deleteBtn::before {
+  color: #B62F31;
   font-family: "FontAwesome";
   font-size: 15px;
   text-indent: 0;
@@ -300,14 +302,20 @@ form label {
   content: "\f044";
   color: #076690;
 }
+
 .deleteBtn::before { 
-  content: "\f2ed";
+  content: "\f1f8";
   color: #B62F31;
 }
 
-.rows:nth-child(3) {
+.modifications {
   display: flex;
   gap: 10px;
+}
+
+.rows .column { 
+  flex-basis: 14%;
+  color: #B62F31; 
 }
 /*=================================
   main styling ends here
