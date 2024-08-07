@@ -296,8 +296,14 @@ form label {
   cursor: pointer;
 }
 
-.editBtn:before { content: "\f044";}
-.deleteBtn::before { content: "\f2ed";}
+.editBtn:before { 
+  content: "\f044";
+  color: #076690;
+}
+.deleteBtn::before { 
+  content: "\f2ed";
+  color: #B62F31;
+}
 
 .rows:nth-child(3) {
   display: flex;
